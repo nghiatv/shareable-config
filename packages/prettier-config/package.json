@@ -14,6 +14,13 @@
     "index.js",
     "scripts/*"
   ],
+  "scripts": {
+    "test": "echo \"No test specified\"",
+    "postinstall": "node scripts/postinstall.js"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "homepage": "https://github.com/nghiatv/shareable-config/tree/main/packages/prettier-config#readme",
   "keywords": [
     "config",
