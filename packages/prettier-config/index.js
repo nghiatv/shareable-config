@@ -9,7 +9,7 @@ module.exports = {
     semi: true,
     trailingComma: 'es5',
     bracketSpacing: true,
-    bracketSameLine:true,
+    bracketSameLine: false,
     overrides: [
       {
         files: ['*.html'],
