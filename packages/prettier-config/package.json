@@ -1,6 +1,6 @@
 {
   "name": "@nghiatv/prettier-config",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Nghiatv's shareable configuration for prettier (VSCode only)",
   "main": "index.js",
   "author": "Nghia Than <nghiait0111@gmail.com>",
