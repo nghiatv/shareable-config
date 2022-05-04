@@ -1,10 +1,13 @@
 {
-  "name": "shareable-configs",
+  "name": "@nghiatv/shareable-configs",
   "version": "1.0.0",
   "description": "My personal shareable configuaration",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "bootstrap:ci": "yarn install --frozen-lockfile --ignore-engines",
+    "version:ci": "npx lerna version --yes --conventional-commits --create-release github --message 'chore(release): publish'",
+    "publish:ci": "npx lerna publish from-package --yes --no-verify-access"
   },
   "keywords": [
     "config",
@@ -14,6 +17,27 @@
   "author": "Nghia Than <nghiait0111@gmail.com>",
   "license": "ISC",
   "devDependencies": {
-    "lerna": "^4.0.0"
-  }
+    "@commitlint/cli": "^16.2.4",
+    "@commitlint/config-conventional": "^16.2.4",
+    "lerna": "^4.0.0",
+    "simple-git-hooks": "^2.7.0"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "yarn lint-staged",
+    "commit-msg": "yarn commitlint --edit $1",
+    "pre-push": "yarn run lint"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nghiatv/shareable-config.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nghiatv/shareable-config/issues"
+  },
+  "homepage": "https://github.com/nghiatv/shareable-config#readme"
 }

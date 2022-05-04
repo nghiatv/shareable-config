@@ -1,0 +1,27 @@
+{
+  "name": "@nghiatv/prettier-config",
+  "version": "0.0.1",
+  "description": "Nghiatv's shareable configuration for prettier (VSCode only)",
+  "main": "index.js",
+  "author": "Nghia Than <nghiait0111@gmail.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">= 12",
+    "npm": ">= 6",
+    "yarn": ">=1.20.0"
+  },
+  "files": [
+    "index.js",
+    "scripts/*"
+  ],
+  "homepage": "https://github.com/nghiatv/shareable-config/tree/main/packages/prettier-config#readme",
+  "keywords": [
+    "config",
+    "nghiatv",
+    "prettier-config",
+    "prettier"
+  ],
+  "devDependencies": {
+    "prettier": "^2.6.2"
+  }
+}
